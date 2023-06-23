@@ -1,0 +1,240 @@
+.card {
+  display: flex; & :last-of-type{
+      margin-bottom: 0;
+    }
+  &_sm {
+    background-color: #f0f0f0;
+    max-width: 525px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+  }
+
+  &__content {
+    padding: 10px 0 10px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__title {
+    color: #25213b;
+    text-transform: uppercase;
+    text-decoration: underline black;
+    //line-height: 20px;
+    letter-spacing: 5%;
+    font-weight: $mediumFontWeight;
+    font-size: $baseFontSize;
+    cursor: pointer;
+    & > a {
+      text-decoration: none;
+      color: #25213b;
+      &:hover {
+        color: $linkHover;
+        text-decoration: underline $linkHover;
+      }
+    }
+    &:hover {
+      color: $linkHover;
+      text-decoration: underline $linkHover;
+    }
+  }
+  &__publish {
+    color: #868686;
+    font-size: 12px;
+    font-weight: $regularFontWeight;
+    letter-spacing: 5%;
+    line-height: 14px;
+  }
+  &__img {
+    position: relative;
+    width: 195px;
+    height: 120px;
+    //height: 120px;
+    //height: auto;
+    overflow: hidden;
+
+    &_category > p > img {
+      /*  width: 100%;*/
+      height: 100%;
+    }
+  }
+
+  &__category {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    text-align: center;
+    width: 86px;
+    color: $white;
+    font-size: 12px;
+    font-weight: $regularFontWeight;
+    font-family: $fontFamily;
+    background-color: #00000081;
+    letter-spacing: 5%;
+    padding: 7px 0;
+    & > ul > li > a {
+      text-decoration: none;
+      color: inherit;
+    }
+    &_slider {
+      position: absolute;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    & > p > img {
+      height: 120px;
+      width: 100%;
+      transition: transform 0.25s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.card-slider {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height:450px;
+  
+  &__img {
+background-color: red;
+width: 100%;
+height: 100%;
+overflow: hidden;
+  }
+  &__category {
+    position: absolute;
+    top: 0%;
+  }
+  &__content {
+    position: absolute;
+    background-color: #00000081;
+    width: 100%;
+    bottom: 0%;
+  }
+  &__title {
+    color: #f2f2f2;
+    text-decoration: #f2f2f2 underline;
+  }
+  &__publish {
+    color: #d0d0d0;
+  }
+}
+
+
+.card-slider__img > a > p > img {
+ 
+    height: 450px;
+    width: 100%;
+
+  transition: transform 0.25s;
+}
+.card-slider__img:hover > a > p > img {
+  transform: scale(1.05);
+}
+
+
+
+.card-lg {
+  display: flex;
+  flex-direction: column;
+  max-width: 306px;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  &__link {
+    & p {
+      max-height: 205px;
+      overflow: hidden;
+    }
+    & p > img {
+      width: 100%;
+      height: 100%;
+
+      transition: transform 0.25s;
+      overflow: hidden;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__img {
+    position: relative;
+  }
+  &__img > img {
+    transition: transform 0.25s;
+  }
+  &__img:hover > img {
+    transform: scale(1.1);
+  }
+  &__category {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 86px;
+    color: $white;
+    font-size: 12px;
+    font-weight: $regularFontWeight;
+    font-family: $fontFamily;
+    background-color: #00000081;
+    letter-spacing: 5%;
+    padding: 7px 0;
+    & > ul > li > a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  &__content {
+    padding-top: 12px;
+  }
+  &__title {
+    font-weight: $mediumFontWeight;
+    
+    color: #25213b;
+    font-size: $baseFontSize;
+    & a:link {
+      text-decoration: none;
+      color: inherit;
+    }
+    & a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+.card-read-more {
+  position: relative;
+  background: url("../i/2_1/read_more.jpg") center/cover no-repeat;
+  height: 185px;
+  width: 305px;
+  & > img {
+    max-height: 185px;
+    max-width: 305px;
+  }
+  &__link {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black;
+    line-height: 25px;
+    font-size: $baseFontSize;
+    font-weight: $boldFontWeight;
+    letter-spacing: 5%;
+    cursor: pointer;
+    text-align: center;
+  }
+  &__link:hover {
+    color: $linkHover;
+  }
+}

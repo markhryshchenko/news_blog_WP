@@ -1,0 +1,12 @@
+.wp-pagenavi {
+  //background-color: aliceblue;
+  text-align: center;
+  & span.pages {
+   display: none;
+  }
+}
+.pagination-box{
+  display: flex;
+    justify-content: center;
+   
+}

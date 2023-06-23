@@ -1,0 +1,42 @@
+.post {margin: 0 auto 30px auto;
+  &__title {
+   font-weight: $boldFontWeight ;
+   color: $black;
+   font-size: 24px;
+   line-height: 28px;
+   letter-spacing: 0;
+   text-align: center;
+   margin-bottom: 20px;
+   padding: 0 18px;
+  }
+  &__media {
+    text-align: center;
+    margin:0 auto 30px auto;
+    max-width: 90%;
+    & >p > img {
+        max-width: 90%;
+    }
+  }
+  &__content {
+    text-align: justify;
+    margin: auto;
+    width: 80%;
+    & > p {
+        margin-bottom: 18px;
+    }
+  }
+  &__link {
+    font-style: italic;
+    color: #b0b0b0;
+    text-align: center;
+  }
+}
+@media (min-width: 1023px) {
+  .post{
+    &__content {
+    
+    
+      width: 60%;
+    
+  }}
+}

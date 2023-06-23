@@ -1,0 +1,107 @@
+.main {
+  padding: 20px;
+  background-color: $white;
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    background-color: red;
+  }
+}
+.news-line {
+  // general style for news lines
+  margin-bottom: 36px;
+  .news-line__title {
+    text-transform: capitalize;
+    font-family: $fontFamily;
+    color: $black;
+    font-size: 24px;
+    font-weight: $boldFontWeight;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+  &__link {
+    font-weight: $boldFontWeight;
+    color: $black;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    &:hover {
+      color: $linkHover;
+    }
+  }
+}
+/* ---===first line===--- */
+.recent-news {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    //width: 100%;
+    //gap: 24px;
+    &_left{
+      display: block;
+    }
+  }
+}
+/* ---===second line of news ===--- */
+.more-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+  }
+}
+/* ---===third line of news ===--- */
+.category-news {
+  margin: 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &_left-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+     
+    }
+    &_right-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+  }
+}
+//.category-box{}
+.trending-box {
+  width: 600px;
+  margin: auto;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__list > a {
+    text-decoration: none;
+    color: #25213b;
+    line-height: 25px;
+    font-weight: $mediumFontWeight;
+    letter-spacing: 5%;
+    font-size: $baseFontSize;
+    &:hover {
+      color: $linkHover;
+    }
+  }
+  &__list > a > li {
+    border-bottom: 1px solid #898989;
+    padding-bottom: 12px;
+  }
+}

@@ -1,0 +1,126 @@
+.card {
+  display: flex;
+  justify-content: start;
+  &_sm {
+    background-color: #f0f0f0;
+    max-width: 750px;
+    margin-bottom: 24px;
+  }
+  &__content {
+    padding: 10px 0 10px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+    gap: 20px;
+  }
+  &__title {
+    color: #25213b;
+    text-transform: uppercase;
+    text-decoration: underline black;
+    line-height: 25px;
+    letter-spacing: 5%;
+    font-weight: $mediumFontWeight;
+    font-size: $baseFontSize;
+    cursor: pointer;
+    &:hover{
+      color: $linkHover;
+      text-decoration: underline $linkHover;
+    }
+  }
+  &__publish {
+    color: #868686;
+    font-size: 12px;
+    font-weight: $regularFontWeight;
+    letter-spacing: 5%;
+    line-height: 14px;
+  }
+  &__img {
+    position: relative;
+    height: 120px;
+  }
+
+  &__category {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    text-align: center;
+    width: 86px;
+    color: $white;
+    font-size: 12px;
+    font-weight: $regularFontWeight;
+    font-family: $fontFamily;
+    background-color: #00000081;
+    letter-spacing: 5%;
+    padding: 7px 0;
+    &_slider {
+      position: absolute;
+    }
+  }
+}
+.card-slider {
+  position: relative;
+  max-width: 745px;
+  cursor: pointer;
+  overflow: hidden;
+
+  &__category {
+    position: absolute;
+    top: 0%;
+  }
+  &__content {
+    position: absolute;
+    background-color: #00000081;
+    width: 100%;
+    bottom: 0%;
+  }
+  &__title {
+    color: #f2f2f2;
+    text-decoration: #f2f2f2 underline;
+  }
+  &__publish {
+    color: #d0d0d0;
+  }
+}
+.card-slider > img {
+  width: 100%;
+  transition: transform 0.25s;
+}
+.card-slider:hover > img {
+  transform: scale(1.1);
+}
+.card-lg {
+  display: flex;
+  flex-direction: column;
+  max-width: 306px;
+  cursor: pointer;
+  overflow: hidden;
+  &__img {
+    position: relative;  
+  }
+  &__img > img {transition: transform 0.25s;}
+  &__img:hover > img{transform: scale(1.1);}
+  &__category {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 86px;
+    color: $white;
+    font-size: 12px;
+    font-weight: $regularFontWeight;
+    font-family: $fontFamily;
+    background-color: #00000081;
+    letter-spacing: 5%;
+    padding: 7px 0;
+  }
+  &__content {
+    padding-top: 12px;
+  }
+  &__title {
+    font-weight: $mediumFontWeight;
+    line-height: 25px;
+    color: #25213b;
+    font-size: $baseFontSize;
+  }
+}

@@ -1,0 +1,43 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+li.cat-item {
+    margin-bottom: 24px;
+}
+li.cat-item > a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+
+  cursor: pointer;
+  &::before {
+    content: '⇐';	
+  }
+  &:hover {
+    color: $linkHover;
+  }
+}
+.column__list > li.cat-item > a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 0px;
+
+  cursor: pointer;
+  &::before {
+    content: '';	
+  }
+  &:hover {
+    color: $linkHover;
+  }
+}
